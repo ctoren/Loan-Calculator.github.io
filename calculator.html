@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="normalize.css" />
 
 <style>
 
@@ -22,12 +22,12 @@
   width: 600px;
   height: 500px;
   border: solid black;
-  background-image: url(light.png);
+  background-image: url(images/light.png);
 
 }
 .col-md-4 {
   font-size: 45px;
-  background-image: url(star.png);
+  background-image: url(images/star.png);
   margin-left: 30px;
   margin-top: -125px;
 }
@@ -83,7 +83,7 @@ input{
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-   <form name="loans" method=GET>
+   <form name="loans" method=GET id="grad1">
      <table class="center" id="item1">
         <tr>
          <td>LOAN AMOUNT</td>
@@ -97,7 +97,7 @@ input{
        <td>Interest Rate Per Year</td></tr>
   <tr><td> <input id="interest"> </td></tr>
     <tr><td><button type = "button" class = "medium-btn b1" onClick="loanCalc()">
-   <img src="images/boom2.png" width="300px" height="220px"/>
+   <img src="images/boom.png" width="300px" height="220px"/>
 </button>
 </tr></td>
 
