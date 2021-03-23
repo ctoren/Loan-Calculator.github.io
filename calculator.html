@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Loan Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+
+<style>
+
+.col-md-6 {
+
+  border-radius: 25px;
+  margin-bottom: 1%;
+  margin-top: -15%;
+  margin-left: 4%;
+  width: 600px;
+  height: 500px;
+  border: solid black;
+  background-image: url(light.png);
+
+}
+.col-md-4 {
+  font-size: 45px;
+  background-image: url(star.png);
+  margin-left: 30px;
+  margin-top: -125px;
+}
+
+
+
+body {
+  font-family: 'Bangers'; font-size: 23px;
+  background-image: url("sky3.png");
+  margin-top: 0;
+  padding: 0;
+}
+.right {
+display:inline-block;
+width: 500px;
+ height: 300px;
+ overflow: hidden;
+ margin-right: 350px;
+}
+
+
+.item1{
+  grid-row: 1 / span 5;
+}
+
+table {
+  vertical-align: top;
+
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+input{
+  border: solid black;
+  margin-bottom: 10px;
+}
+
+.b1{
+  border: none;
+  background: none;
+}
+
+</style>
+<header>
+      <img src="superloan.png" alt="super" class="right" align="right">
+</header>
+</head>
+<body>
+<!-- Calculator -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+   <form name="loans" method=GET id="grad1">
+     <table class="center" id="item1">
+        <tr>
+         <td>LOAN AMOUNT</td>
+	  <tr><td> <input id="amount"> </td></tr>
+    </tr>
+      <tr>
+         <td>Loan Term in Months</td></tr>
+	  <tr><td> <input id="months"> </td>
+    </tr>
+    <tr>
+       <td>Interest Rate Per Year</td></tr>
+  <tr><td> <input id="interest"> </td></tr>
+    <tr><td><button type = "button" class = "medium-btn b1" onClick="loanCalc()">
+   <img src="boom.png" width="300px" height="220px"/>
+</button>
+</tr></td>
+
+</table>
+</form>
+</div>
+<div class="col-md-4">
+    <p>Your Result Is: <br> $<span id = "result"></span></p>
+<img src="wow.png" width="500px" height="400px"/>
+<script>
+function loanCalc() {
+  amt = document.getElementById("amount").value;
+  mths = document.getElementById("months").value;
+  inter = document.getElementById("interest").value;
+  document.getElementById("result").innerHTML = amt * ((inter/10)/mths);
+}
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
