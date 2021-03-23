@@ -64,11 +64,28 @@ table {
 input{
   border: solid black;
   margin-bottom: 10px;
+  resize: verticle;
 }
 
 .b1{
   border: none;
   background: none;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-md-6, .col-md-4, button {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 </style>
